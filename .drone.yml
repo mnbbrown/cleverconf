@@ -1,0 +1,10 @@
+debug: true
+
+build:
+    image: mnbbrown/ci:latest
+    environment:
+        - GOOS=linux
+        - GOARCH=amd64
+    commands:
+        - make deps
+        - make test
